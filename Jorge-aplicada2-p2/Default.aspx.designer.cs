@@ -13,6 +13,15 @@ namespace Jorge_aplicada2_p2 {
     public partial class Default {
         
         /// <summary>
+        /// ArticulosLinkButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ArticulosLinkButton;
+        
+        /// <summary>
         /// ToastrButton control.
         /// </summary>
         /// <remarks>

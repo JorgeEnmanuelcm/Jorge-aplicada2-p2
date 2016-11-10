@@ -17,7 +17,12 @@ namespace Jorge_aplicada2_p2
 
         protected void ToastrButton_Click(object sender, EventArgs e)
         {
-            Utilitarios.ShowToastr(this, "Funciona correctamente", "Mensaje", "success");
+            Response.Redirect("/Registros/Ventas.aspx");
+        }
+
+        protected void ArticulosLinkButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Registros/Articulos.aspx");
         }
     }
 }

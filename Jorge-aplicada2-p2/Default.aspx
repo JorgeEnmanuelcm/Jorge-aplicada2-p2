@@ -5,7 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
     <div class="text-center">
-        <asp:LinkButton ID="ToastrButton" runat="server" CssClass="btn btn-info" Text="Toastr" OnClick="ToastrButton_Click"><span class="glyphicon glyphicon-saved"></span>&nbsp;Toastr</asp:LinkButton>
+        <asp:LinkButton ID="ArticulosLinkButton" runat="server" CssClass="btn btn-info" Text="Articulos" OnClick="ArticulosLinkButton_Click"><span class="glyphicon glyphicon-saved"></span>&nbsp;Articulos</asp:LinkButton>
+        <asp:LinkButton ID="ToastrButton" runat="server" CssClass="btn btn-info" Text="Ventas" OnClick="ToastrButton_Click"><span class="glyphicon glyphicon-saved"></span>&nbsp;Ventas</asp:LinkButton>
     </div>
     <br />
 </asp:Content>
