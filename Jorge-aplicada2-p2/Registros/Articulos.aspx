@@ -11,8 +11,9 @@
         <div class="form-group">
             <asp:Label ID="Label1" runat="server" Text="ArticuloId:"></asp:Label>
             <asp:TextBox ID="ArticuloIdTextBox" runat="server"></asp:TextBox>
-            <asp:Button ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
-            <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" OnClick="NuevoButton_Click" />
+            <asp:Button ID="BuscarButton" runat="server" class ="btn btn-info btn-sm" Text="Buscar" OnClick="BuscarButton_Click" />
+            <asp:Button ID="NuevoButton" runat="server" class ="btn btn-warning btn-sm" Text="Nuevo" OnClick="NuevoButton_Click" />
+            <asp:Button ID="EliminarButton" runat="server" class ="btn btn-danger btn-sm" Text="Eliminar" OnClick="EliminarButton_Click" />
         </div>
     </div>
     <br />

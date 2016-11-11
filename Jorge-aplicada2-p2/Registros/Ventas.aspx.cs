@@ -23,7 +23,7 @@ namespace Jorge_aplicada2_p2.Registros
                 ArticuloIdDropDownList.DataTextField = "Descripcion";
                 ArticuloIdDropDownList.DataValueField = "ArticuloId";
                 ArticuloIdDropDownList.DataBind();
-
+                FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 dt.Columns.AddRange(new DataColumn[3] { new DataColumn("ArticuloId"), new DataColumn("Cantidad"), new DataColumn("Precio") });
                 ViewState["VentasClass"] = dt;
             }
@@ -111,14 +111,20 @@ namespace Jorge_aplicada2_p2.Registros
 
         protected void AgregarButton_Click(object sender, EventArgs e)
         {
-            //int aux = 0;
+            int cant;
+            int Pre;
+            int.TryParse(CantidadTextBox.Text, out cant);
+            int.TryParse(PrecioTextBox.Text, out Pre);
+            int mont;
+            int.TryParse(MontoTextBox.Text, out mont);
             DataTable dt = (DataTable)ViewState["VentasClass"];
             dt.Rows.Add(ArticuloIdDropDownList.SelectedValue, CantidadTextBox.Text, PrecioTextBox.Text);
             ViewState["VentasClass"] = dt;
             VentasGridView.DataSource = dt;
             VentasGridView.DataBind();
-            //aux = (CantidadTextBox.tost * )
-            //MontoTextBox.Text += aux.ToString(); 
+            CantidadTextBox.Text = string.Empty;
+            PrecioTextBox.Text = string.Empty;
+            MontoTextBox.Text = (mont + (cant * Pre)).ToString();          
         }
 
         protected void GuardarButton_Click(object sender, EventArgs e)

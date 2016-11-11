@@ -10,6 +10,12 @@
     <script src="/JQuery/toastr.min.js"></script>
     <link href="/Boostrap/toastr.min.css" rel="stylesheet" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <style type="text/css">
+        body form {
+            margin: 0 auto;
+            background-color: #4DA495;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

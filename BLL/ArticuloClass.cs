@@ -56,7 +56,15 @@ namespace BLL
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            ConexionDB Conexion = new ConexionDB();
+            bool retorno = false;
+            try
+            {
+                Conexion.Ejecutar(String.Format("Delete From Articulos where ArticuloId = {0} ", this.ArticuloId));
+                retorno = true;
+            }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
         public override bool Insertar()

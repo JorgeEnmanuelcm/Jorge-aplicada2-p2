@@ -56,5 +56,21 @@ namespace Jorge_aplicada2_p2.Registros
                 }
             }
         }
+
+        protected void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (Articulo.Buscar(Articulo.ArticuloId))
+            {
+                if (Articulo.Eliminar())
+                {
+                    Limpiar();
+                    Utilitarios.ShowToastr(this, "bien", "Mensaje", "success");
+                }
+                else
+                {
+                    Utilitarios.ShowToastr(this, "error", "Mensaje", "error");
+                }
+            }
+        }
     }
 }

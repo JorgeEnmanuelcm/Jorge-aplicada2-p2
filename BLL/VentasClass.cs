@@ -124,7 +124,11 @@ namespace BLL
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {
-            throw new NotImplementedException();
+            ConexionDB Conexion = new ConexionDB();
+            string OrdenFinal = "";
+            if (!Orden.Equals(""))
+                OrdenFinal = " Order by " + Orden;
+            return Conexion.ObtenerDatos("Select " + Campos + "From Ventas where " + Condicion + " " + OrdenFinal);
         }
     }
 }
