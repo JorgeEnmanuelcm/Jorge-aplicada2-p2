@@ -90,14 +90,14 @@ namespace Jorge_aplicada2_p2.Registros
             MontoTextBox.Text = Venta.Monto.ToString();
             foreach (var item in Venta.Detalle)
             {
-                dt = (DataTable)ViewState["VentasClass"];
+                dt = (DataTable)ViewState["Detalle"];
                 dt.Rows.Add(item.ArticuloId, item.Cantidad, item.Precio);
-                ViewState["VentasClass"] = dt;
-                VentasGridView.DataSource = (DataTable)ViewState["VentasClass"];
+                ViewState["Detalle"] = dt;
+                VentasGridView.DataSource = (DataTable)ViewState["Detalle"];
                 VentasGridView.DataBind();
-                CantidadTextBox.Text = string.Empty;
-                PrecioTextBox.Text = string.Empty;
-                VentasGridView.DataSource = string.Empty;
+                //CantidadTextBox.Text = string.Empty;
+                //PrecioTextBox.Text = string.Empty;
+                //VentasGridView.DataSource = string.Empty;
 
             }
         }

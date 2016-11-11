@@ -63,6 +63,8 @@
       <DependentUpon>Parcial2BD.mdf</DependentUpon>
     </Content>
     <Content Include="Boostrap\toastr.min.css" />
+    <Content Include="Consultas\ArticulosCForm.aspx" />
+    <Content Include="Consultas\VentasCForm.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="JQuery\toastr.min.js" />
     <Content Include="Registros\Articulos.aspx" />
@@ -70,6 +72,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ArticulosCForm.aspx.cs">
+      <DependentUpon>ArticulosCForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ArticulosCForm.aspx.designer.cs">
+      <DependentUpon>ArticulosCForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\VentasCForm.aspx.cs">
+      <DependentUpon>VentasCForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\VentasCForm.aspx.designer.cs">
+      <DependentUpon>VentasCForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

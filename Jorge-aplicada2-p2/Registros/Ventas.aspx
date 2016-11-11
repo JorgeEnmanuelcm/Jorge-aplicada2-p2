@@ -59,7 +59,7 @@
 
     <div class="text-center">
         <asp:Button ID="AgregarButton" runat="server" CssClass="btn btn-info" Text="Agregar" OnClick="AgregarButton_Click" /><br />
-        <asp:GridView ID="VentasGridView" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="VentasGridView" runat="server" class="table table-bordered table-hover table-striped table-responsive" AutoGenerateColumns="False">
             <Columns>
                 <asp:BoundField DataField="ArticuloId" HeaderText="Articulo Id" SortExpression="ArticuloId" />
                 <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" SortExpression="Cantidad" />

@@ -24,5 +24,15 @@ namespace Jorge_aplicada2_p2
         {
             Response.Redirect("/Registros/Articulos.aspx");
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Consultas/ArticulosCForm.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Consultas/VentasCForm.aspx");
+        }
     }
 }

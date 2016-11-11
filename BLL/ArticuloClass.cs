@@ -75,10 +75,11 @@ namespace BLL
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {
             ConexionDB Conexion = new ConexionDB();
-            string OrdenFinal = "";
+            string ordenar = "";
             if (!Orden.Equals(""))
-                OrdenFinal = " Order by " + Orden;
-            return Conexion.ObtenerDatos("Select " + Campos + "From Articulos where " + Condicion + " " + OrdenFinal);
+                ordenar = " orden by  " + Orden;
+            return Conexion.ObtenerDatos(("Select " + Campos + " from Articulos where " + Condicion + ordenar));
+
         }
     }
 }

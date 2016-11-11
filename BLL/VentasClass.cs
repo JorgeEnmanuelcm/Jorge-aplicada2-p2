@@ -44,6 +44,7 @@ namespace BLL
                 {
                     this.VentaId = (int)dt.Rows[0]["VentaId"];
                     this.Fecha = dt.Rows[0]["Fecha"].ToString();
+                    this.Monto = (int)dt.Rows[0]["Monto"];
                     dtDetalle = Conexion.ObtenerDatos(String.Format("select * from VentasDetalle where VentaId=" + IdBuscado));
                     dtDetalle.Clear();
                     foreach (DataRow row in dtDetalle.Rows)
@@ -126,10 +127,10 @@ namespace BLL
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {
             ConexionDB Conexion = new ConexionDB();
-            string OrdenFinal = "";
+            string ordenar = "";
             if (!Orden.Equals(""))
-                OrdenFinal = " Order by " + Orden;
-            return Conexion.ObtenerDatos("Select " + Campos + "From Ventas where " + Condicion + " " + OrdenFinal);
+                ordenar = " orden by  " + Orden;
+            return Conexion.ObtenerDatos(("Select " + Campos + " from Ventas where " + Condicion + ordenar));
         }
     }
 }
