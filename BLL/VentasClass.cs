@@ -112,6 +112,7 @@ namespace BLL
                     foreach (VentasDetalle var in Detalle)
                     {
                         Conexion.Ejecutar(String.Format("Insert into VentasDetalle(VentaId, ArticuloId, Cantidad, Precio) Values ({0}, {1}, {2}, {3})", this.VentaId, var.ArticuloId, var.Cantidad, var.Precio));
+                        Conexion.Ejecutar(string.Format("Update Articulos set Existencia = Existencia -" + var.Cantidad + "where ArticuloId=" + var.ArticuloId));
                     }
                 }
             }

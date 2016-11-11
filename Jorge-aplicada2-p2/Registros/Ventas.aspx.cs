@@ -31,8 +31,6 @@ namespace Jorge_aplicada2_p2.Registros
 
         private void Limpiar()
         {
-            VentaIdTextBox.Text = string.Empty;
-            FechaTextBox.Text = string.Empty;
             MontoTextBox.Text = string.Empty;
             CantidadTextBox.Text = string.Empty;
             PrecioTextBox.Text = string.Empty;
